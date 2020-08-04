@@ -20,7 +20,9 @@ class Transfer
         receiver.deposit (amount)
         @status="complete"
         elsif @status="complete"
-        puts ""
+        puts "Transaction was already excuted"
+      else @status="rejected"
+        
         
   # if sender.valid? && sender.balance > amount
   #   sender.deposit(amount * -1)
