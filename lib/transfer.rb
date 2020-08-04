@@ -19,7 +19,8 @@ class Transfer
         sender.deposit (amount * -1)
         receiver.deposit (amount)
         @status="complete"
-        
+        elsif @status="complete"
+        puts ""
         
   # if sender.valid? && sender.balance > amount
   #   sender.deposit(amount * -1)
