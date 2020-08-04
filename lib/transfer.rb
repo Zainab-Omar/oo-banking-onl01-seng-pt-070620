@@ -14,8 +14,8 @@ class Transfer
   end
   
   def execute_transaction
-    both=sender + receiver
-      if both.valid? && sender.balance > amount
+    @both= @both.valid?
+      if @both && sender.balance > amount
         sender.deposit (amount * -1)
         receiver.deposit (amount)
         @status="complete"
