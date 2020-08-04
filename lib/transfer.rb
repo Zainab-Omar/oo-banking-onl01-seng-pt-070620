@@ -18,6 +18,7 @@ class Transfer
       if both.valid? && sender.balance > amount
         sender.deposit (amount * -1)
         receiver.deposit (amount)
+        @status="complete"
         
         
   # if sender.valid? && sender.balance > amount
